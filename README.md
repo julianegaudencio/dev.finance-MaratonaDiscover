@@ -1,2 +1,2 @@
 # dev.finance-MaratonaDiscover
-Site desenvolvido em css e javascript 
+Site desenvolvido em css e javascript (em andamento)
