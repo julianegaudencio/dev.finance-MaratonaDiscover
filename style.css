@@ -1,0 +1,320 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+:root {
+    --dark-orange:  #be5625; 
+}
+
+body {
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border-width: 0;
+    white-space: nowrap;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* LINKS E BOTÕES ************/
+
+a {
+    color: #ee7f4c;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #3dd705;
+    transition: 0.5s;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+.button.cancel {
+    color: #e92929;
+    border: 2px solid #e92929;
+
+    border-radius: 0.20rem;
+
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.7;
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    color: #fff;
+    background: #49aa26;
+
+    padding: 0;
+    border-radius: 0.20rem;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3dd705;
+    border: none;
+}
+
+/* TÍTULOS ******************/
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-orange);
+    font-weight: normal;
+}
+
+/* CABEÇALHO ****************/
+
+header {
+    background: #FFBE9F;
+    
+    text-align: center;
+}
+
+header img {
+    width: 110px;
+}
+
+#logo {
+    color: rgb(83, 83, 83);
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0 0 10rem;
+}
+
+/* SESSÕES *****************/
+
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color: rgb(83, 83, 83);
+    margin-top: 0;
+
+}
+
+/* CARTÕES *****************/
+
+.card {
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+
+    margin-bottom: 1.5rem;
+
+    color: var(--dark-orange);
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+
+    margin-top: 1rem;
+}
+
+.card.total {
+    background: #f7834d;
+    color: #fff;
+}
+
+/* TABELA ******************/
+
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: rgb(83, 83, 83);
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table thead th {
+    background: rgba(255, 255, 255, 0.6);
+
+    padding: 1rem 2rem;
+    font-weight: normal;
+    
+    text-align: left;
+}
+
+table tbody tr {
+    opacity: 0.7;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table tbody td {
+    background:  #fff;
+    padding: 1rem 2rem;
+}
+
+td.description {
+    color: var(--dark-orange);
+}
+
+td.income {
+    color: #18b65f;
+}
+
+td.expense {
+    color: #ce2525;
+}
+
+/* MODAL *******************/
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+    max-width: 500px;
+    width: 90%;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* FORMULÁRIO ********************/
+
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    color: #49aa26;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.5rem;
+}
+
+.input-group .help {
+    opacity: 0.7;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+/* RODAPÉ ******************/
+
+footer {
+    padding: 3rem 0 2rem;
+    color: var(--dark-orange);
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* RESPONSIVO **************/
+
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+}
